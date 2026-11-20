@@ -10,6 +10,7 @@ export async function loader({
   const { id } = params;
   // Previous: separate JSON Server, configured through .env.
   // const apiUrl = import.meta.env.VITE_API_URL;
+  
   // Current: API hosted alongside this website.
   const apiUrl = new URL("/api", request.url).href;
   const res = await fetch(`${apiUrl}/projects/${id}`);
