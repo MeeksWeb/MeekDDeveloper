@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "FluxBank",
+      "description": "A high-contrast dark-mode financial analytics app engineered with electric cobalt accents, tabular numerals, and scannable data visualizations.",
+      "overview": "Fluxbank is a modern fintech application designed to provide users with a seamless, high-performance banking experience. The project reimagines how people interact with finance by removing unnecessary complexity and replacing it with clarity, speed, intuitive designs, and sophisticated data visualization.",
+      "image": "/images/fluxbank.png",
+      "url": "https://meekddesigner.framer.website/projects/fluxbank",
+      "date": "2026-05-05",
+      "category": "Fintech",
+      "featured": false,
+      "role": "Product Designer, Framer Developer",
+      "problem": "Traditional mobile banking apps bury essential financial insights beneath cluttered menus, low-contrast charts, and fragmented transaction logs, creating high cognitive load when users try to track spending or manage accounts.",
+      "solution": "Engineered a high-contrast dark-mode interface anchored by electric cobalt accents, tabular numerals, and modular analytics cards—giving users instant clarity over cash flow, real-time spending breakdowns, and frictionless transfers."
+    },
+    {
+      "id": 2,
+      "title": "DashBite",
+      "description": "A friction-free mobile food delivery platform featuring intuitive restaurant discovery, streamlined cart checkout, and real-time order tracking.",
+      "overview": "DashBite is a mobile food delivery app designed to make the entire food ordering journey feel simpler and more enjoyable. From discovering a meal to tracking it on the way to your doorstep, the experience brings the entire journey into one cohesive product.",
+      "image": "/images/dashbite.png",
+      "url": "https://meekddesigner.framer.website/projects/dashbite",
+      "date": "2026-06-15",
+      "category": "Food Delivery",
+      "featured": true,
+      "role": "Product Designer, Framer Developer",
+      "problem": "Hungry users frequently abandon food orders due to overwhelming restaurant catalogs, tedious multi-step customization screens, hidden checkout fees, and vague delivery arrival estimates.",
+      "solution": "Designed a cohesive, conversion-focused mobile ordering journey featuring smart meal discovery, a persistent three-tap cart checkout with transparent pricing, and a live visual courier tracker from kitchen to doorstep."
+    },
+    {
+      "id": 3,
+      "title": "Hirely",
+      "description": "A crisp light-mode mobile job discovery platform engineered with interactive swipe-to-apply mechanics to eliminate traditional form fatigue.",
+      "overview": "Hirely is a mobile job finder application designed to eliminate form fatigue and information overload for digital creators. With real-time application tracking, the platform transforms the anxious, clunky process of mobile job hunting into a fluid, transparent, and rewarding experience.",
+      "image": "/images/hirely.png",
+      "url": "https://meekddesigner.framer.website/projects/hirely",
+      "date": "2026-06-02",
+      "category": "Recruitment",
+      "featured": false,
+      "role": "Lead Product Designer",
+      "problem": "Digital creators face severe form fatigue and information overload on mobile job boards, forced to repeatedly fill out redundant applications only to be left in the dark without status updates.",
+      "solution": "Built a crisp light-mode mobile experience centered around scannable role cards, one-profile swipe-to-apply gestures, and a transparent real-time application status tracker."
+    },
+    {
+      "id": 4,
+      "title": "Smartlearn",
+      "description": "An accessible digital education mobile application designed with clear course progression pathways, interactive modules, and distraction-free reading layouts.",
+      "overview": "SMARTLEARN is an interactive educational app designed to make learning engaging and fun for early stage learners (4–10 years old). The project focuses on creating a joyful, intuitive interface that teaches foundational concepts (animals, numbers, nature) while utilizing gamification to foster motivation, positive reinforcement, and a personalized learning path.",
+      "image": "/images/smartlearn.png",
+      "url": "https://meekddesigner.framer.website/projects/smartlearn",
+      "date": "2026-06-10",
+      "category": "Education",
+      "featured": true,
+      "role": "UI/UX Designer, Design System Architect",
+      "problem": "Early-stage learners (ages 4–10) easily lose focus when educational apps rely on text-heavy screens, confusing navigation, and rigid lesson structures that fail to reward curiosity.",
+      "solution": "Created a joyful, tactile learning environment with visual topic pathways (animals, numbers, nature), large child-friendly touch targets, and gamified positive reinforcement that celebrates every milestone."
+    },
+    {
+      "id": 5,
+      "title": "SpotKick",
+      "description": "An energetic mobile sports platform balancing live match statistics, dynamic visual hierarchies, and clean component grids.",
+      "overview": "SpotKick is a mobile football platform designed to make playing football easier, from finding the right pitch to joining a game, paying your share, connecting with teammates, and getting directions to the venue.",
+      "image": "/images/spotkick.png",
+      "url": "https://meekddesigner.framer.website/projects/spotkick",
+      "date": "2026-04-18",
+      "category": "Sport",
+      "featured": true,
+      "role": "Product Designer, Visual Designer",
+      "problem": "Organizing casual football matches is fragmented across group chats, making it difficult for players to discover nearby pitches, confirm open roster spots, split pitch fees, and navigate to venues.",
+      "solution": "Unified local pitch discovery, one-tap match registration, split-share payments, team chat, and turn-by-turn venue directions into a single high-energy mobile platform."
+    }
+  ]
+}

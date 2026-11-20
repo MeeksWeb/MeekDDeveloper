@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "slug": "designing-fluxbank-fintech-ui",
+    "title": "Designing FluxBank: High-Contrast Dark Mode for Fintech",
+    "excerpt": "How electric cobalt accents and structured visual hierarchies reduce cognitive load in data-dense financial analytics apps.",
+    "date": "2026-11-10T00:00:00"
+  },
+  {
+    "id": "2",
+    "slug": "streamlining-ordering-flows-dashbite",
+    "title": "Streamlining Real-Time Ordering Flows in DashBite",
+    "excerpt": "Lessons from designing a friction-free mobile food delivery experience from discovery to live order tracking.",
+    "date": "2026-10-28T00:00:00"
+  },
+  {
+    "id": "3",
+    "slug": "combating-form-fatigue-hirely",
+    "title": "Combating Form Fatigue with Swipe-to-Apply Mechanics in Hirely",
+    "excerpt": "Rethinking mobile job discovery with a crisp light-mode interface and gesture-driven application workflows.",
+    "date": "2026-10-14T00:00:00"
+  },
+  {
+    "id": "4",
+    "slug": "architecting-accessible-learning-smartlearn",
+    "title": "Architecting Accessible Digital Learning Pathways in Smartlearn",
+    "excerpt": "Structuring course progression, intuitive navigation, and distraction-free reading layouts for mobile education.",
+    "date": "2026-09-25T00:00:00"
+  },
+  {
+    "id": "5",
+    "slug": "dynamic-visual-hierarchies-spotkick",
+    "title": "Building Dynamic Visual Hierarchies for Sports Apps with SpotKick",
+    "excerpt": "Balancing energetic sports typography, live match stats, and clean component grids on mobile screens.",
+    "date": "2026-09-10T00:00:00"
+  }
+]

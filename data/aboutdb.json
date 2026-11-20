@@ -1,0 +1,92 @@
+{
+  "designSkills": [
+    {
+      "id": "1",
+      "name": "Product Design (UI/UX)"
+    },
+    {
+      "id": "2",
+      "name": "Design Systems"
+    },
+    {
+      "id": "3",
+      "name": "User Research & Flows"
+    },
+    {
+      "id": "4",
+      "name": "Wireframing & Prototyping"
+    },
+    {
+      "id": "5",
+      "name": "Brand & Visual Identity"
+    },
+    {
+      "id": "6",
+      "name": "Framer Development"
+    }
+  ],
+  "engineeringSkills": [
+    {
+      "id": "1",
+      "name": "React & React Router v7"
+    },
+    {
+      "id": "2",
+      "name": "TypeScript"
+    },
+    {
+      "id": "3",
+      "name": "Tailwind CSS"
+    },
+    {
+      "id": "4",
+      "name": "HTML5 & Modern CSS"
+    },
+    {
+      "id": "5",
+      "name": "JavaScript (ES6+)"
+    },
+    {
+      "id": "6",
+      "name": "REST APIs & JSON Architecture"
+    }
+  ],
+  "toolchain": [
+    {
+      "id": "1",
+      "name": "Figma",
+      "role": "Interface & Design Systems"
+    },
+    {
+      "id": "2",
+      "name": "Framer",
+      "role": "Interactive Sites & CMS"
+    },
+    {
+      "id": "3",
+      "name": "VS Code",
+      "role": "Front-End Development"
+    },
+    {
+      "id": "4",
+      "name": "Adobe Photoshop",
+      "role": "Visual & Brand Assets"
+    }
+  ],
+  "experience": [
+    {
+      "id": "1",
+      "period": "2025 — Present",
+      "role": "Product Designer & Framer Developer",
+      "company": "Freelance / Independent Studio",
+      "summary": "Designing end-to-end mobile applications, fintech analytics platforms, and high-converting digital storefronts—from user research and Figma systems."
+    },
+    {
+      "id": "2",
+      "period": "2025 — 2026",
+      "role": "UI/UX & Visual Brand Designer",
+      "company": "Client & Startup Collaborations",
+      "summary": "Partnered with early-stage startups across fintech, logistics, recruitment, and e-commerce to simplify complex user flows and establish cohesive visual identities."
+    }
+  ]
+}
