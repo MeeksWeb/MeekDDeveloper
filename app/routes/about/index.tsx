@@ -55,16 +55,16 @@ export async function loader({
 export default function AboutPage({ loaderData }: Route.ComponentProps) {
   const { designs, engineers, tools, experience } = loaderData;
   return (
-    <main className="min-h-screen bg-warm-950 text-warm-100 selection:bg-accent-500 selection:text-warm-50">
+    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-6 pt-8 pb-24 md:pt-24">
         <header className="mb-16">
-          <h1 className="text-3xl leading-tight font-bold tracking-tight text-warm-50 md:text-5xl">
+          <h1 className="text-3xl leading-tight font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">ABOUT ME</span>
-            <span className="mx-3 font-light text-accent-500">|</span>
-            <span className="text-warm-200">Michael Victor</span>
+            <span className="mx-3 font-light text-blue-500">|</span>
+            <span className="text-gray-200">Michael Victor</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-warm-400 md:text-lg">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-gray-400 md:text-lg">
             I'm a Product Designer, UI/UX Designer, and Front-End Developer. I
             focus on turning complex, high-friction workflows into clean,
             high-contrast digital products that feel effortless to use.
@@ -76,7 +76,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
 
         {/* Skills & Toolchain */}
         <section className="mb-20">
-          <h2 className="mb-8 text-2xl font-bold text-warm-50">
+          <h2 className="mb-8 text-2xl font-bold text-white">
             Capabilities & Stack
           </h2>
 
@@ -89,12 +89,12 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
         <Experience experience={experience} />
 
         {/* Bottom CTA Banner */}
-        <section className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-warm-900/60 p-8 md:flex-row md:items-center">
+        <section className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-gray-900/60 p-8 md:flex-row md:items-center">
           <div>
-            <h2 className="text-xl font-bold text-warm-50 md:text-2xl">
+            <h2 className="text-xl font-bold text-white md:text-2xl">
               Have a product or idea in mind?
             </h2>
-            <p className="mt-2 text-sm text-warm-400 md:text-base">
+            <p className="mt-2 text-sm text-gray-400 md:text-base">
               Explore my selected case studies or reach out directly to
               collaborate.
             </p>
@@ -103,13 +103,13 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               to="/project"
-              className=" bg-warm-900 px-5 py-2.5 text-sm font-medium text-warm-50 transition-colors hover:border-warm-600 hover:bg-warm-800"
+              className=" bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gray-600 hover:bg-gray-800"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className=" bg-accent-600 px-5 py-2.5 text-sm font-medium text-warm-50 transition-colors hover:bg-accent-500"
+              className=" bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-500"
             >
               Get in Touch
             </Link>

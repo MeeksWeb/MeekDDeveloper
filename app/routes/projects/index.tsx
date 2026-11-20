@@ -24,15 +24,15 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   return (
-    <main className="min-h-screen bg-warm-950 text-warm-100 selection:bg-accent-500 selection:text-warm-50">
+    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-8xl px-6 pt-4 pb-24 md:pt-24">
         <header className="mb-12 text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-warm-50 md:text-5xl">
-            <span className="font-semibold text-warm-100 leading-normal ">
+          <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
+            <span className="font-semibold text-gray-100 leading-normal ">
               Explore My Projects
             </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-warm-400 md:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-400 md:text-base">
             A curated showcase of end-to-end product ecosystems, mobile
             applications, and high-converting digital storefronts.
           </p>
@@ -46,8 +46,8 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
 
         {/* Empty State Fallback */}
         {projects.length === 0 && (
-          <div className="rounded-2xl border border-warm-800 bg-warm-900/30 py-16 text-center">
-            <p className="text-warm-400">No projects found.</p>
+          <div className="rounded-2xl border border-gray-800 bg-gray-900/30 py-16 text-center">
+            <p className="text-gray-400">No projects found.</p>
           </div>
         )}
       </div>

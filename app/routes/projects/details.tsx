@@ -27,13 +27,13 @@ const details = ({ loaderData }: Route.ComponentProps) => {
   const project = loaderData;
 
   return (
-    <main className="min-h-screen bg-warm-950 text-warm-100 selection:bg-accent-500 selection:text-warm-50">
+    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-6 pt-2 pb-24 md:pt-16">
         {/* Back Navigation */}
         <div className="mb-8">
           <Link
             to="/project"
-            className="inline-flex items-center gap-2 text-sm font-medium text-warm-400 transition-colors hover:text-accent-400"
+            className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-blue-400"
           >
             <span aria-hidden="true">
               <FaArrowLeft />
@@ -43,15 +43,15 @@ const details = ({ loaderData }: Route.ComponentProps) => {
         </div>
 
         <header className="mb-10">
-          <h1 className="text-3xl font-bold tracking-tight text-warm-50 md:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">{project.title}</span>
-            <span className="mx-3 font-light text-accent-500">|</span>
-            <span className="font-semibold text-warm-400 ">Case Study</span>
+            <span className="mx-3 font-light text-blue-500">|</span>
+            <span className="font-semibold text-gray-400 ">Case Study</span>
           </h1>
         </header>
 
         <section className="grid grid-cols-1 items-start gap-10 lg:grid-cols-1">
-          <div className="overflow-hidden rounded-2xl border border-warm-800/80 bg-warm-900/50 p-3 lg:col-span-1">
+          <div className="overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/50 p-3 lg:col-span-1">
             <img
               src={project.image}
               alt={`${project.title} interface showcase`}
@@ -61,43 +61,43 @@ const details = ({ loaderData }: Route.ComponentProps) => {
 
           <div className="space-y-6 lg:col-span-6">
             <div>
-              <h2 className="text-base font-bold tracking-wide text-warm-50">
+              <h2 className="text-base font-bold tracking-wide text-white">
                 Overview
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-warm-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
                 {project.overview}
               </p>
             </div>
 
             <div>
-              <h2 className="text-base font-bold tracking-wide text-warm-50">
+              <h2 className="text-base font-bold tracking-wide text-white">
                 Role
               </h2>
-              <p className="mt-1.5 text-sm text-warm-400 md:text-base">
+              <p className="mt-1.5 text-sm text-gray-400 md:text-base">
                 {project.role}
               </p>
               <time
                 dateTime={project.date}
-                className="mt-1 block font-mono text-xs text-warm-500"
+                className="mt-1 block font-mono text-xs text-gray-500"
               >
                 {project.date}
               </time>
             </div>
 
             <div>
-              <h2 className="text-base font-bold tracking-wide text-warm-50">
+              <h2 className="text-base font-bold tracking-wide text-white">
                 Problem
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-warm-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
                 {project.problem}
               </p>
             </div>
 
             <div>
-              <h2 className="text-base font-bold tracking-wide text-warm-50">
+              <h2 className="text-base font-bold tracking-wide text-white">
                 Solution
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-warm-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
                 {project.solution}
               </p>
             </div>
@@ -108,7 +108,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent-500 px-5 py-2.5 text-sm font-medium text-warm-50 transition-colors hover:bg-accent-600"
+                className="inline-flex items-center gap-2 bg-blue-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-600"
               >
                 <span>View Full Case Study In Framer</span>
                 <span aria-hidden="true">

@@ -12,7 +12,7 @@ const SearchFilter = ({ searchQuery, onSearchChange }: PostFilter) => {
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Search articles by keyword, title, or topic..."
-          className="w-full rounded-xl border border-warm-600 bg-warm-900/20 py-3 pr-4 pl-4 text-sm text-warm-50 placeholder-warm-500 backdrop-blur-md transition-colors focus:border-accent-500 focus:outline-none"
+          className="w-full rounded-xl border border-gray-600 bg-gray-900/20 py-3 pr-4 pl-4 text-sm text-white placeholder-gray-500 backdrop-blur-md transition-colors focus:border-blue-500 focus:outline-none"
         />
       </div>
     </div>

@@ -27,7 +27,7 @@ export async function loader({
 export default function Home({ loaderData }: Route.ComponentProps) {
   const { projects } = loaderData;
   return (
-    <div className="min-h-screen text-warm-100">
+    <div className="min-h-screen text-gray-100">
       <HeroSection />
       <FeaturedProjects projects={projects} />
       <Services />
