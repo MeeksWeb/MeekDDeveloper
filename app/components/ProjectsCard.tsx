@@ -9,6 +9,10 @@ const ProjectsCard = ({ project }: { project: Projects }) => {
           <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-800/60">
             <img
               src={project.image}
+              srcSet={`${project.image.replace(/\.webp$/, "-800.webp")} 800w, ${project.image} 1600w`}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              loading="lazy"
+              decoding="async"
               alt={`${project.title} preview`}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
