@@ -8,7 +8,10 @@ export async function loader({
   params,
 }: Route.LoaderArgs): Promise<Projects> {
   const { id } = params;
-  const apiUrl = import.meta.env.VITE_API_URL;
+  // Previous: separate JSON Server, configured through .env.
+  // const apiUrl = import.meta.env.VITE_API_URL;
+  // Current: API hosted alongside this website.
+  const apiUrl = new URL("/api", request.url).href;
   const res = await fetch(`${apiUrl}/projects/${id}`);
   if (!res.ok) {
     throw new Response("Failed to load project", {

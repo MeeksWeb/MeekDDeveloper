@@ -17,7 +17,11 @@ type AddAllTypesProps = {
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<AddAllTypesProps> {
-  const apiUrl = import.meta.env.VITE_ABOUT_API_URL;
+  // Previous: separate JSON Server, configured through .env.
+  // const apiUrl = import.meta.env.VITE_ABOUT_API_URL;
+  
+  // Current: API hosted alongside this website.
+  const apiUrl = new URL("/api", request.url).href;
   const [designRes, engRes, toolRes, experienceRes] = await Promise.all([
     fetch(`${apiUrl}/designSkills`),
     fetch(`${apiUrl}/engineeringSkills`),
