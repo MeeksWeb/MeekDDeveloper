@@ -5,7 +5,7 @@ const Services = () => {
     <motion.section
       {...reveal}
       id="services"
-      className="bg-gray-950 px-6 py-24 text-gray-100 md:py-32"
+      className="bg-charcoal-950 px-6 py-24 text-charcoal-100 md:py-32"
     >
       <div className="mx-auto max-w-8xl">
         <div className="mb-14 md:mb-20">
@@ -14,8 +14,8 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="group grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
-          <span className="font-sans text-sm font-medium text-blue-500">
+        <div className="group grid gap-6 border-t border-charcoal-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
+          <span className="font-sans text-sm font-medium text-brand-500">
             /01
           </span>
 
@@ -23,7 +23,7 @@ const Services = () => {
             PRODUCT DESIGNER
           </h3>
 
-          <p className="max-w-md font-sans text-sm leading-[1.9] text-gray-400 md:text-base">
+          <p className="max-w-md font-sans text-sm leading-[1.9] text-charcoal-400 md:text-base">
             I solve complex business problems by creating intuitive,
             user-centered interfaces. My approach combines deep user research
             with high-fidelity visual design and prototyping to ensure every
@@ -32,8 +32,8 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="group grid gap-6 border-y border-gray-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
-          <span className="font-sans text-sm font-medium text-blue-500">
+        <div className="group grid gap-6 border-y border-charcoal-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
+          <span className="font-sans text-sm font-medium text-brand-500">
             /02
           </span>
 
@@ -41,7 +41,7 @@ const Services = () => {
             FRONTEND DEVELOPER
           </h3>
 
-          <p className="max-w-md font-sans text-sm leading-[1.9] text-gray-400 md:text-base">
+          <p className="max-w-md font-sans text-sm leading-[1.9] text-charcoal-400 md:text-base">
             I transform creative designs into responsive, interactive, and
             high-performance web experiences. Using modern technologies like
             React, TypeScript, and Tailwind CSS, I build clean, scalable

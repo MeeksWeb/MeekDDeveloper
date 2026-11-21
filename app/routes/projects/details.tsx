@@ -30,13 +30,13 @@ const details = ({ loaderData }: Route.ComponentProps) => {
   const project = loaderData;
 
   return (
-    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
+    <main className="min-h-screen bg-charcoal-950 text-charcoal-100 selection:bg-brand-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-6 pt-2 pb-24 md:pt-16">
         {/* Back Navigation */}
         <div className="mb-8">
           <Link
             to="/project"
-            className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-blue-400"
+            className="inline-flex items-center gap-2 text-sm font-medium text-charcoal-400 transition-colors hover:text-brand-400"
           >
             <span aria-hidden="true">
               <FaArrowLeft />
@@ -48,8 +48,8 @@ const details = ({ loaderData }: Route.ComponentProps) => {
         <motion.header {...reveal} className="mb-10">
           <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">{project.title}</span>
-            <span className="mx-3 font-light text-blue-500">|</span>
-            <span className="font-semibold text-gray-400 ">Case Study</span>
+            <span className="mx-3 font-light text-brand-500">|</span>
+            <span className="font-semibold text-charcoal-400 ">Case Study</span>
           </h1>
         </motion.header>
 
@@ -57,7 +57,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
           {...reveal}
           className="grid grid-cols-1 items-start gap-10 lg:grid-cols-1"
         >
-          <div className="overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/50 p-3 lg:col-span-1">
+          <div className="overflow-hidden rounded-2xl border border-charcoal-800/80 bg-charcoal-900/50 p-3 lg:col-span-1">
             <img
               src={project.image}
               alt={`${project.title} interface showcase`}
@@ -70,7 +70,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
               <h2 className="text-base font-bold tracking-wide text-white">
                 Overview
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-charcoal-400 md:text-base">
                 {project.overview}
               </p>
             </div>
@@ -79,12 +79,12 @@ const details = ({ loaderData }: Route.ComponentProps) => {
               <h2 className="text-base font-bold tracking-wide text-white">
                 Role
               </h2>
-              <p className="mt-1.5 text-sm text-gray-400 md:text-base">
+              <p className="mt-1.5 text-sm text-charcoal-400 md:text-base">
                 {project.role}
               </p>
               <time
                 dateTime={project.date}
-                className="mt-1 block font-mono text-xs text-gray-500"
+                className="mt-1 block font-mono text-xs text-charcoal-500"
               >
                 {project.date}
               </time>
@@ -94,7 +94,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
               <h2 className="text-base font-bold tracking-wide text-white">
                 Problem
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-charcoal-400 md:text-base">
                 {project.problem}
               </p>
             </div>
@@ -103,7 +103,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
               <h2 className="text-base font-bold tracking-wide text-white">
                 Solution
               </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-gray-400 md:text-base">
+              <p className="mt-1.5 text-sm leading-relaxed text-charcoal-400 md:text-base">
                 {project.solution}
               </p>
             </div>
@@ -114,7 +114,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-600"
+                className="inline-flex items-center gap-2 bg-brand-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-600"
               >
                 <span>View Full Case Study In Framer</span>
                 <span aria-hidden="true">

@@ -14,7 +14,7 @@ const FeaturedProjects = ({ projects }: { projects: Projects[] }) => {
     <motion.section {...reveal} className="px-4 py-16 ">
       <div className="flex justify-between items-end mb-10">
         <div>
-          <h2 className="text-xs uppercase tracking-widest text-blue-400 font-semibold mb-2">
+          <h2 className="text-xs uppercase tracking-widest text-brand-400 font-semibold mb-2">
             Selected Work
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold">
@@ -23,7 +23,7 @@ const FeaturedProjects = ({ projects }: { projects: Projects[] }) => {
         </div>
         <Link
           to="/project"
-          className=" flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors"
+          className=" flex items-center gap-2 text-sm text-charcoal-400 hover:text-brand-400 transition-colors"
         >
           View all projects
           <span aria-hidden="true">{<FaArrowRight />}</span>

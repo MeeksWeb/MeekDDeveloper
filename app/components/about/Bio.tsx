@@ -5,7 +5,7 @@ const Bio = () => {
     <section className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-12">
       <motion.div
         {...reveal}
-        className="space-y-5 text-sm leading-relaxed text-gray-400 md:text-base lg:col-span-7"
+        className="space-y-5 text-sm leading-relaxed text-charcoal-400 md:text-base lg:col-span-7"
       >
         <h2 className="text-xl font-bold text-white md:text-2xl">
           Bridging Design Craft & Code
@@ -30,28 +30,28 @@ const Bio = () => {
       </motion.div>
 
       {/* Highlights Card */}
-      <aside className="rounded-2xl  bg-gray-900/40 p-6 lg:col-span-5">
-        <h3 className="text-sm font-bold tracking-wider text-blue-400 uppercase">
+      <aside className="rounded-2xl  bg-charcoal-900/40 p-6 lg:col-span-5">
+        <h3 className="text-sm font-bold tracking-wider text-brand-400 uppercase">
           Core Principles
         </h3>
         <ul className="mt-5 space-y-4 text-sm">
-          <li className="border-b border-gray-800/70 pb-4">
+          <li className="border-b border-charcoal-800/70 pb-4">
             <p className="font-semibold text-white">Clarity Over Clutter</p>
-            <p className="mt-1 text-gray-400">
+            <p className="mt-1 text-charcoal-400">
               Generous whitespace, crisp typography, and purposeful contrast
               guide attention without visual noise.
             </p>
           </li>
-          <li className="border-b border-gray-800/70 pb-4">
+          <li className="border-b border-charcoal-800/70 pb-4">
             <p className="font-semibold text-white">Systems Thinking</p>
-            <p className="mt-1 text-gray-400">
+            <p className="mt-1 text-charcoal-400">
               Reusable tokens, modular grids, and consistent interaction
               patterns built to scale.
             </p>
           </li>
           <li>
             <p className="font-semibold text-white">Design-to-Code Execution</p>
-            <p className="mt-1 text-gray-400">
+            <p className="mt-1 text-charcoal-400">
               Translating Figma architectures directly into responsive,
               performant front-end interfaces.
             </p>

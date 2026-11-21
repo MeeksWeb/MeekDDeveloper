@@ -57,16 +57,16 @@ export async function loader({
 export default function AboutPage({ loaderData }: Route.ComponentProps) {
   const { designs, engineers, tools, experience } = loaderData;
   return (
-    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
+    <main className="min-h-screen bg-charcoal-950 text-charcoal-100 selection:bg-brand-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-6 pt-8 pb-24 md:pt-24">
         <motion.header {...reveal} className="mb-16">
           <h1 className="text-3xl leading-tight font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">ABOUT ME</span>
-            <span className="mx-3 font-light text-blue-500">|</span>
-            <span className="text-gray-200">Michael Victor</span>
+            <span className="mx-3 font-light text-brand-500">|</span>
+            <span className="text-charcoal-200">Michael Victor</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-gray-400 md:text-lg">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-charcoal-400 md:text-lg">
             I'm a Product Designer, UI/UX Designer, and Front-End Developer. I
             focus on turning complex, high-friction workflows into clean,
             high-contrast digital products that feel effortless to use.
@@ -93,13 +93,13 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
         {/* Bottom CTA Banner */}
         <motion.section
           {...reveal}
-          className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-gray-900/60 p-8 md:flex-row md:items-center"
+          className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-charcoal-900/60 p-8 md:flex-row md:items-center"
         >
           <div>
             <h2 className="text-xl font-bold text-white md:text-2xl">
               Have a product or idea in mind?
             </h2>
-            <p className="mt-2 text-sm text-gray-400 md:text-base">
+            <p className="mt-2 text-sm text-charcoal-400 md:text-base">
               Explore my selected case studies or reach out directly to
               collaborate.
             </p>
@@ -108,13 +108,13 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               to="/project"
-              className=" bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gray-600 hover:bg-gray-800"
+              className=" bg-charcoal-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-charcoal-600 hover:bg-charcoal-800"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className=" bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-500"
+              className=" bg-brand-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-500"
             >
               Get in Touch
             </Link>

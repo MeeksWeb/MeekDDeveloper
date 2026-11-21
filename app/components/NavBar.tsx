@@ -5,20 +5,20 @@ import { NavLink } from "react-router";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const base = " transition hover:text-blue-600";
-  const active = "text-blue-600 font-semibold";
+  const base = " transition hover:text-brand-600";
+  const active = "text-brand-600 font-semibold";
 
   return (
     <motion.nav
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="sticky top-0 z-50 w-full border-b border-gray-800/80 bg-gray-950/80 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full border-b border-charcoal-800/80 bg-charcoal-950/80 backdrop-blur-md"
     >
       <div className="max-w-8xl mx-auto flex h-16 items-center justify-between px-4 md:px-20">
         <NavLink
           to="/"
-          className="font-display text-blue-600 font-bold text-lg  "
+          className="font-display text-brand-600 font-bold text-lg  "
         >
           <h1>MeekDDeveloper</h1>
         </NavLink>
@@ -59,7 +59,7 @@ const NavBar = () => {
 
         <div className="flex md:hidden items-center ">
           <button
-            className="text-blue-500 font-bold text-xl "
+            className="text-brand-500 font-bold text-xl "
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
@@ -69,7 +69,7 @@ const NavBar = () => {
 
       {/* MOBILE VIEW */}
       {menuOpen && (
-        <div className="md:hidden border-t border-gray-800/80 bg-gray-950/80 backdrop-blur-md px-6 py-4 space-x-4 text-center ">
+        <div className="md:hidden border-t border-charcoal-800/80 bg-charcoal-950/80 backdrop-blur-md px-6 py-4 space-x-4 text-center ">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? active : base)}

@@ -50,7 +50,7 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
       {Array.from({ length: totalPages }, (_, idx) => (
         <button
           key={idx + 1}
-          className={`px-3 py-1 cursor-pointer ${currentPage === idx + 1 ? "bg-blue-600 text-white" : "bg-gray-700 text-gray"}`}
+          className={`px-3 py-1 cursor-pointer ${currentPage === idx + 1 ? "bg-brand-600 text-white" : "bg-charcoal-700 text-gray"}`}
           onClick={() => setCurrentPage(idx + 1)}
         >
           {idx + 1}
@@ -60,17 +60,17 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
   );
 
   return (
-    <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
+    <main className="min-h-screen bg-charcoal-950 text-charcoal-100 selection:bg-brand-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-4 pt-12 pb-24 md:pt-24">
         <motion.header {...reveal} className="mb-12 text-center">
           <h1 className="text-3xl text-center font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">THOUGHTS</span>
-            <span className="mx-3 font-light text-blue-400">|</span>
-            <span className="font-semibold text-gray-200">
+            <span className="mx-3 font-light text-brand-400">|</span>
+            <span className="font-semibold text-charcoal-200">
               Writing & Articles
             </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-400 md:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-charcoal-400 md:text-base">
             Deep dives into design systems, front-end architecture, user
             experience psychology, and modern product engineering.
           </p>
@@ -94,14 +94,14 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
 
         {/* Empty State Fallback */}
         {filteredPost.length === 0 && (
-          <div className="rounded-2xl border border-gray-800 bg-gray-900/30 py-16 text-center">
-            <p className="text-gray-400">
+          <div className="rounded-2xl border border-charcoal-800 bg-charcoal-900/30 py-16 text-center">
+            <p className="text-charcoal-400">
               {`No articles found matching "${searchQuery}"`}
             </p>
             <button
               type="button"
               onClick={() => setSearchQuery("")}
-              className="mt-4 text-sm font-medium text-blue-400 hover:underline"
+              className="mt-4 text-sm font-medium text-brand-400 hover:underline"
             >
               Clear search query
             </button>

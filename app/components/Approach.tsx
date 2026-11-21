@@ -6,7 +6,7 @@ const Approach = () => {
   return (
     <section
       id="approach"
-      className="bg-gray-950 px-6 py-24 text-gray-100 md:py-32"
+      className="bg-charcoal-950 px-6 py-24 text-charcoal-100 md:py-32"
     >
       <div className="mx-auto max-w-8xl">
         <motion.div
@@ -22,7 +22,7 @@ const Approach = () => {
             TO EXECUTION
           </h2>
 
-          <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-gray-400">
+          <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-charcoal-400">
             A thoughtful process that combines strategy, user-centered design,
             and modern frontend development to create meaningful digital
             experiences.
@@ -35,15 +35,15 @@ const Approach = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+          className="grid gap-6 border-t border-charcoal-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
         >
-          <span className="font-display text-xl text-blue-500">01</span>
+          <span className="font-display text-xl text-brand-500">01</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
             Discovery, Research & Strategy
           </h3>
 
-          <p className="max-w-md text-sm leading-[1.9] text-gray-400 md:text-base">
+          <p className="max-w-md text-sm leading-[1.9] text-charcoal-400 md:text-base">
             Every great digital experience begins with understanding the
             problem. I explore user needs, business objectives, and market
             opportunities through research and competitive analysis. These
@@ -57,15 +57,15 @@ const Approach = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+          className="grid gap-6 border-t border-charcoal-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
         >
-          <span className="font-display text-xl text-blue-500">02</span>
+          <span className="font-display text-xl text-brand-500">02</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
             UX Strategy & Interface Design
           </h3>
 
-          <p className="max-w-md text-sm leading-[1.9] text-gray-400 md:text-base">
+          <p className="max-w-md text-sm leading-[1.9] text-charcoal-400 md:text-base">
             I transform research and ideas into intuitive, visually compelling
             interfaces. From wireframes and user flows to interactive prototypes
             and scalable design systems, I focus on creating seamless
@@ -79,15 +79,15 @@ const Approach = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="grid gap-6 border-y border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+          className="grid gap-6 border-y border-charcoal-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
         >
-          <span className="font-display text-xl text-blue-500">03</span>
+          <span className="font-display text-xl text-brand-500">03</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
             Frontend Development & Launch
           </h3>
 
-          <p className="max-w-md text-sm leading-[1.9] text-gray-400 md:text-base">
+          <p className="max-w-md text-sm leading-[1.9] text-charcoal-400 md:text-base">
             I bring designs to life through clean, responsive, and maintainable
             code using React, TypeScript, and Tailwind CSS. I focus on
             performance, accessibility, smooth interactions, and cross-device
@@ -97,14 +97,14 @@ const Approach = () => {
         </motion.div>
 
         <div className="mt-16 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-sm text-base leading-relaxed text-gray-400">
+          <p className="max-w-sm text-base leading-relaxed text-charcoal-400">
             Have an idea worth building? Let's turn it into something
             exceptional.
           </p>
 
           <Link
             to="/contact"
-            className="inline-flex w-fit items-center gap-4 bg-blue-500 px-6 py-3 font-sans text-sm font-medium text-white transition-colors duration-300 hover:bg-blue-600"
+            className="inline-flex w-fit items-center gap-4 bg-brand-500 px-6 py-3 font-sans text-sm font-medium text-white transition-colors duration-300 hover:bg-brand-600"
           >
             Let's Work Together
             <FaArrowRight />

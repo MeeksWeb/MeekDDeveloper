@@ -7,16 +7,16 @@ const BlogPostCard = ({ post }: { post: BlogPostMeta }) => {
     <Link to={`/blog/${post.slug}`}>
       <motion.article
         {...reveal}
-        className="group flex flex-col justify-between rounded-2xl border border-gray-800/80 bg-gray-950/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-gray-900/60 md:p-8"
+        className="group flex flex-col justify-between rounded-2xl border border-charcoal-800/80 bg-charcoal-950/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:bg-charcoal-900/60 md:p-8"
       >
         <div>
           <div className="mb-3 flex items-center justify-between gap-4">
-            <span className="font-mono text-xs font-semibold text-blue-600">
+            <span className="font-mono text-xs font-semibold text-brand-600">
               Article #{post.id}
             </span>
             <time
               dateTime={post.date}
-              className="font-mono text-xs text-gray-500"
+              className="font-mono text-xs text-charcoal-500"
             >
               {new Date(post.date).toDateString()}
             </time>
@@ -27,7 +27,7 @@ const BlogPostCard = ({ post }: { post: BlogPostMeta }) => {
             {post.title}
           </h2>
 
-          <p className="mt-3 text-sm leading-normal text-gray-400 md:text-base">
+          <p className="mt-3 text-sm leading-normal text-charcoal-400 md:text-base">
             {post.excerpt}
           </p>
         </div>
