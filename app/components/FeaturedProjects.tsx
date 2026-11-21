@@ -1,5 +1,7 @@
+import { motion } from "motion/react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 import FeaturedCard from "./FeaturedCard";
 
@@ -9,7 +11,7 @@ const FeaturedProjects = ({ projects }: { projects: Projects[] }) => {
     .slice(0, 2);
 
   return (
-    <section className="px-4 py-16 ">
+    <motion.section {...reveal} className="px-4 py-16 ">
       <div className="flex justify-between items-end mb-10">
         <div>
           <h2 className="text-xs uppercase tracking-widest text-blue-400 font-semibold mb-2">
@@ -33,7 +35,7 @@ const FeaturedProjects = ({ projects }: { projects: Projects[] }) => {
           <FeaturedCard key={project.id} project={project} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

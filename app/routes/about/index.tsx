@@ -1,9 +1,11 @@
+import { motion } from "motion/react";
 import { Link } from "react-router";
 import Bio from "~/components/about/Bio";
 import Design from "~/components/about/Design";
 import Experience from "~/components/about/Experience";
 import Frontend from "~/components/about/Frontend";
 import Tools from "~/components/about/Tools";
+import { reveal } from "~/motion";
 import type { AboutProps } from "~/type";
 import type { Route } from "./+types";
 
@@ -19,7 +21,7 @@ export async function loader({
 }: Route.LoaderArgs): Promise<AddAllTypesProps> {
   // Previous: separate JSON Server, configured through .env.
   // const apiUrl = import.meta.env.VITE_ABOUT_API_URL;
-  
+
   // Current: API hosted alongside this website.
   const apiUrl = new URL("/api", request.url).href;
   const [designRes, engRes, toolRes, experienceRes] = await Promise.all([
@@ -57,7 +59,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-6 pt-8 pb-24 md:pt-24">
-        <header className="mb-16">
+        <motion.header {...reveal} className="mb-16">
           <h1 className="text-3xl leading-tight font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">ABOUT ME</span>
             <span className="mx-3 font-light text-blue-500">|</span>
@@ -69,13 +71,13 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
             focus on turning complex, high-friction workflows into clean,
             high-contrast digital products that feel effortless to use.
           </p>
-        </header>
+        </motion.header>
 
         {/* Bio & Philosophy */}
         <Bio />
 
         {/* Skills & Toolchain */}
-        <section className="mb-20">
+        <motion.section {...reveal} className="mb-20">
           <h2 className="mb-8 text-2xl font-bold text-white">
             Capabilities & Stack
           </h2>
@@ -85,11 +87,14 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
             <Frontend engineers={engineers} />
             <Tools tools={tools} />
           </div>
-        </section>
+        </motion.section>
         <Experience experience={experience} />
 
         {/* Bottom CTA Banner */}
-        <section className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-gray-900/60 p-8 md:flex-row md:items-center">
+        <motion.section
+          {...reveal}
+          className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-gray-900/60 p-8 md:flex-row md:items-center"
+        >
           <div>
             <h2 className="text-xl font-bold text-white md:text-2xl">
               Have a product or idea in mind?
@@ -114,7 +119,7 @@ export default function AboutPage({ loaderData }: Route.ComponentProps) {
               Get in Touch
             </Link>
           </div>
-        </section>
+        </motion.section>
       </div>
     </main>
   );

@@ -1,4 +1,6 @@
+import { motion } from "motion/react";
 import { Form } from "react-router";
+import { reveal } from "~/motion";
 import type { Route } from "./+types";
 
 export async function action({ request }: Route.ActionArgs) {
@@ -39,11 +41,17 @@ export async function action({ request }: Route.ActionArgs) {
 }
 
 const ContactPage = ({ actionData }: Route.ComponentProps) => {
-  const errors = actionData?.errors || {};
+  const error = actionData?.errors || {};
   return (
-    <section className="min-h-screen bg-gray-950 px-6 py-14 text-white selection:bg-blue-600 selection:text-white md:px-14 md:py-20">
+    <motion.section
+      {...reveal}
+      className="min-h-screen bg-gray-950 px-6 py-14 text-white selection:bg-blue-600 selection:text-white md:px-14 md:py-20"
+    >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 flex flex-col justify-between gap-4 md:mb-12 md:flex-row md:items-start">
+        <motion.header
+          {...reveal}
+          className="mb-10 flex flex-col justify-between gap-4 md:mb-12 md:flex-row md:items-start"
+        >
           <h1 className="font-display text-5xl leading-none tracking-tight text-white sm:text-6xl md:text-7xl">
             Let's Talk
           </h1>
@@ -51,7 +59,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
           <p className="max-w-xs text-sm leading-relaxed text-gray-200 md:pt-2 md:text-right md:text-base">
             Leave your message and I will get back to you ASAP
           </p>
-        </header>
+        </motion.header>
 
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Portrait Image */}
@@ -60,7 +68,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
               <img
                 src="/meekddeveloper.jpeg"
                 alt="Michael Victor standing outdoors"
-                className="aspect-[4/4.3] w-full object-cover object-top"
+                className="aspect-[4/4.3] w-full object-cover rounded-lg object-top"
               />
             </div>
           </div>
@@ -82,8 +90,8 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
                   placeholder="Your Name"
                   className="mt-2.5 w-full border-b border-gray-700 bg-transparent pb-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-blue-600 focus:outline-none md:text-base"
                 />
-                {errors.name && (
-                  <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+                {error.name && (
+                  <p className="text-red-400 text-sm mt-1">{error.name}</p>
                 )}
               </div>
 
@@ -102,8 +110,8 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
                   placeholder="yourmail@gmail.com"
                   className="mt-2.5 w-full border-b border-gray-700 bg-transparent pb-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-blue-600 focus:outline-none md:text-base"
                 />
-                {errors.email && (
-                  <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                {error.email && (
+                  <p className="text-red-400 text-sm mt-1">{error.email}</p>
                 )}
               </div>
 
@@ -121,8 +129,8 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
                   placeholder="Your message"
                   className="mt-2.5 w-full resize-none border-b border-gray-700 bg-transparent pb-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-blue-600 focus:outline-none md:text-base"
                 />
-                {errors.message && (
-                  <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+                {error.message && (
+                  <p className="text-red-400 text-sm mt-1">{error.message}</p>
                 )}
               </div>
               {actionData?.message && (
@@ -143,7 +151,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

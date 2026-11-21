@@ -1,10 +1,15 @@
+import { motion } from "motion/react";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 
 const ProjectsCard = ({ project }: { project: Projects }) => {
   return (
     <Link to={`/project/${project.id}`}>
-      <article className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900/40 transition-all duration-300 hover:-translate-y-1 border-gray-900/40  hover:border-blue-400 ">
+      <motion.article
+        {...reveal}
+        className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-900/40 transition-all duration-300 hover:-translate-y-1 border-gray-900/40  hover:border-blue-400 "
+      >
         <div>
           <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-800/60">
             <img
@@ -40,7 +45,7 @@ const ProjectsCard = ({ project }: { project: Projects }) => {
             </p>
           </div>
         </div>
-      </article>
+      </motion.article>
     </Link>
   );
 };

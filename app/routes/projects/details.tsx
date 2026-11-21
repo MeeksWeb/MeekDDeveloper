@@ -1,5 +1,7 @@
+import { motion } from "motion/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 import type { Route } from "./+types/details";
 
@@ -10,7 +12,7 @@ export async function loader({
   const { id } = params;
   // Previous: separate JSON Server, configured through .env.
   // const apiUrl = import.meta.env.VITE_API_URL;
-  
+
   // Current: API hosted alongside this website.
   const apiUrl = new URL("/api", request.url).href;
   const res = await fetch(`${apiUrl}/projects/${id}`);
@@ -43,15 +45,18 @@ const details = ({ loaderData }: Route.ComponentProps) => {
           </Link>
         </div>
 
-        <header className="mb-10">
+        <motion.header {...reveal} className="mb-10">
           <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">{project.title}</span>
             <span className="mx-3 font-light text-blue-500">|</span>
             <span className="font-semibold text-gray-400 ">Case Study</span>
           </h1>
-        </header>
+        </motion.header>
 
-        <section className="grid grid-cols-1 items-start gap-10 lg:grid-cols-1">
+        <motion.section
+          {...reveal}
+          className="grid grid-cols-1 items-start gap-10 lg:grid-cols-1"
+        >
           <div className="overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/50 p-3 lg:col-span-1">
             <img
               src={project.image}
@@ -118,7 +123,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
               </a>
             </div>
           </div>
-        </section>
+        </motion.section>
       </div>
     </main>
   );

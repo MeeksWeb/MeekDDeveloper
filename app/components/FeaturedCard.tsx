@@ -1,9 +1,14 @@
+import { motion } from "motion/react";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 const FeaturedCard = ({ project }: { project: Projects }) => {
   return (
     <Link to={`/project/${project.id}`}>
-      <div className="group rounded-2xl bg-gray-900/50 overflow-hidden">
+      <motion.div
+        {...reveal}
+        className="group rounded-2xl bg-gray-900/50 overflow-hidden"
+      >
         <div>
           <img
             src={project.image}
@@ -23,7 +28,7 @@ const FeaturedCard = ({ project }: { project: Projects }) => {
           </h4>
           <p className="text-sm text-gray-400 mt-2">{project.description}</p>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 };

@@ -1,10 +1,12 @@
+import { motion } from "motion/react";
+import { reveal } from "~/motion";
 import type { AboutProps } from "~/type";
 
 const Experience = ({ experience }: { experience: AboutProps[] }) => {
   return (
     <section className="mb-20">
       <h2 className="mb-8 text-2xl font-bold text-white">Experience</h2>
-      <div className="space-y-6">
+      <motion.div {...reveal} className="space-y-6">
         {experience.map((item) => (
           <div key={item.id} className="rounded-2xl bg-gray-900/30 p-6 md:p-8">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -21,7 +23,7 @@ const Experience = ({ experience }: { experience: AboutProps[] }) => {
             </p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

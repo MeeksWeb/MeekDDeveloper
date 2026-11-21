@@ -1,9 +1,14 @@
+import { motion } from "motion/react";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { BlogPostMeta } from "~/type";
 const BlogPostCard = ({ post }: { post: BlogPostMeta }) => {
   return (
     <Link to={`/blog/${post.slug}`}>
-      <article className="group flex flex-col justify-between rounded-2xl border border-gray-800/80 bg-gray-950/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-gray-900/60 md:p-8">
+      <motion.article
+        {...reveal}
+        className="group flex flex-col justify-between rounded-2xl border border-gray-800/80 bg-gray-950/50 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-gray-900/60 md:p-8"
+      >
         <div>
           <div className="mb-3 flex items-center justify-between gap-4">
             <span className="font-mono text-xs font-semibold text-blue-600">
@@ -26,7 +31,7 @@ const BlogPostCard = ({ post }: { post: BlogPostMeta }) => {
             {post.excerpt}
           </p>
         </div>
-      </article>
+      </motion.article>
     </Link>
   );
 };

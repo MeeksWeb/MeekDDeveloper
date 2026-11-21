@@ -1,8 +1,10 @@
+import { motion } from "motion/react";
+import { reveal } from "~/motion";
 import type { AboutProps } from "~/type";
 
 const frontend = ({ engineers }: { engineers: AboutProps[] }) => {
   return (
-    <div className="rounded-2xl bg-gray-900/40 p-6">
+    <motion.div {...reveal} className="rounded-2xl bg-gray-900/40 p-6">
       <h3 className="text-base font-bold text-white">Front-End Development</h3>
       <ul className="mt-4 space-y-2.5 text-sm text-gray-400">
         {engineers.map((skill) => (
@@ -12,7 +14,7 @@ const frontend = ({ engineers }: { engineers: AboutProps[] }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

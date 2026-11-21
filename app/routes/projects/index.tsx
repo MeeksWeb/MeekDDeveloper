@@ -1,4 +1,6 @@
+import { motion } from "motion/react";
 import ProjectsCard from "~/components/ProjectsCard";
+import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 import type { Route } from "./+types/index";
 
@@ -26,7 +28,7 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-8xl px-6 pt-4 pb-24 md:pt-24">
-        <header className="mb-12 text-center">
+        <motion.header {...reveal} className="mb-12 text-center">
           <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
             <span className="font-semibold text-gray-100 leading-normal ">
               Explore My Projects
@@ -36,13 +38,16 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
             A curated showcase of end-to-end product ecosystems, mobile
             applications, and high-converting digital storefronts.
           </p>
-        </header>
+        </motion.header>
 
-        <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.section
+          {...reveal}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {sortProjects.map((project) => (
             <ProjectsCard key={project.id} project={project} />
           ))}
-        </section>
+        </motion.section>
 
         {/* Empty State Fallback */}
         {projects.length === 0 && (

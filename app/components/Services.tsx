@@ -1,19 +1,19 @@
+import { motion } from "motion/react";
+import { reveal } from "~/motion";
 const Services = () => {
   return (
-    <section
+    <motion.section
+      {...reveal}
       id="services"
       className="bg-gray-950 px-6 py-24 text-gray-100 md:py-32"
     >
       <div className="mx-auto max-w-8xl">
-
         <div className="mb-14 md:mb-20">
-
           <h2 className="font-display text-4xl leading-[1.2] tracking-tight text-white md:text-6xl">
             MY SERVICES
           </h2>
         </div>
 
-        
         <div className="group grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
           <span className="font-sans text-sm font-medium text-blue-500">
             /01
@@ -32,7 +32,6 @@ const Services = () => {
           </p>
         </div>
 
-        
         <div className="group grid gap-6 border-y border-gray-800 py-12 md:grid-cols-[70px_1fr_1fr] md:gap-10">
           <span className="font-sans text-sm font-medium text-blue-500">
             /02
@@ -52,7 +51,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

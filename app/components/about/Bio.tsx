@@ -1,7 +1,12 @@
+import { motion } from "motion/react";
+import { reveal } from "~/motion";
 const Bio = () => {
   return (
     <section className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-12">
-      <div className="space-y-5 text-sm leading-relaxed text-gray-400 md:text-base lg:col-span-7">
+      <motion.div
+        {...reveal}
+        className="space-y-5 text-sm leading-relaxed text-gray-400 md:text-base lg:col-span-7"
+      >
         <h2 className="text-xl font-bold text-white md:text-2xl">
           Bridging Design Craft & Code
         </h2>
@@ -22,7 +27,7 @@ const Bio = () => {
           . Understanding how components behave in code ensures my design
           systems are scalable, accessible, and developer-ready from day one.
         </p>
-      </div>
+      </motion.div>
 
       {/* Highlights Card */}
       <aside className="rounded-2xl  bg-gray-900/40 p-6 lg:col-span-5">

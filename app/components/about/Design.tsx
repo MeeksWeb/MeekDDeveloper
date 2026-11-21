@@ -1,7 +1,9 @@
+import { motion } from "motion/react";
+import { reveal } from "~/motion";
 import type { AboutProps } from "~/type";
 const Design = ({ designs }: { designs: AboutProps[] }) => {
   return (
-    <div className="rounded-2xl bg-gray-900/40 p-6">
+    <motion.div {...reveal} className="rounded-2xl bg-gray-900/40 p-6">
       <h3 className="text-base font-bold text-white">Product & UI/UX Design</h3>
       <ul className="mt-4 space-y-2.5 text-sm text-gray-400">
         {designs.map((skill) => (
@@ -11,7 +13,7 @@ const Design = ({ designs }: { designs: AboutProps[] }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

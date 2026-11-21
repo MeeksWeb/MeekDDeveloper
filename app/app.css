@@ -30,3 +30,36 @@ body {
     font-family: var(--font-display);
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  a[class*="bg-blue-"],
+  a[class*="bg-gray-"] {
+    transition: background-color 180ms ease, color 180ms ease,
+      box-shadow 180ms ease, translate 180ms ease;
+  }
+
+  button:active,
+  a[class*="bg-blue-"]:active,
+  a[class*="bg-gray-"]:active {
+    translate: 0 1px;
+  }
+
+  @media (hover: hover) {
+    button:hover,
+    a[class*="bg-blue-"]:hover,
+    a[class*="bg-gray-"]:hover {
+      translate: 0 -2px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}

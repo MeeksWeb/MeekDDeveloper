@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router";
 
@@ -8,7 +9,12 @@ const NavBar = () => {
   const active = "text-blue-600 font-semibold";
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-800/80 bg-gray-950/80 backdrop-blur-md">
+    <motion.nav
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="sticky top-0 z-50 w-full border-b border-gray-800/80 bg-gray-950/80 backdrop-blur-md"
+    >
       <div className="max-w-8xl mx-auto flex h-16 items-center justify-between px-4 md:px-20">
         <NavLink
           to="/"
@@ -101,7 +107,7 @@ const NavBar = () => {
           </NavLink>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 

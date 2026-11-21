@@ -1,6 +1,8 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import BlogPostCard from "~/components/BlogPostCard";
 import SearchFilter from "~/components/SearchFilter";
+import { reveal } from "~/motion";
 import type { BlogPostMeta } from "~/type";
 import type { Route } from "./+types";
 
@@ -60,7 +62,7 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 selection:bg-blue-500 selection:text-white">
       <div className="mx-auto max-w-5xl px-4 pt-12 pb-24 md:pt-24">
-        <header className="mb-12 text-center">
+        <motion.header {...reveal} className="mb-12 text-center">
           <h1 className="text-3xl text-center font-bold tracking-tight text-white md:text-5xl">
             <span className="uppercase tracking-wider">THOUGHTS</span>
             <span className="mx-3 font-light text-blue-400">|</span>
@@ -72,7 +74,7 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
             Deep dives into design systems, front-end architecture, user
             experience psychology, and modern product engineering.
           </p>
-        </header>
+        </motion.header>
 
         {/* Search Bar Filter */}
         <SearchFilter

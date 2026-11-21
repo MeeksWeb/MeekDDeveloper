@@ -1,6 +1,8 @@
+import { motion } from "motion/react";
 import { FaArrowLeft } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router";
+import { reveal } from "~/motion";
 import type { BlogPostMeta } from "~/type";
 import type { Route } from "./+types/details";
 
@@ -43,7 +45,10 @@ const details = ({ loaderData }: Route.ComponentProps) => {
           </Link>
         </div>
 
-        <header className="mb-12 border-b border-gray-800/80 pb-8">
+        <motion.header
+          {...reveal}
+          className="mb-12 border-b border-gray-800/80 pb-8"
+        >
           <div className="mb-4 flex flex-wrap items-center gap-3 font-mono text-xs text-gray-400">
             <span className=" border border-blue-500/30 bg-blue-500/10 px-2.5 py-0.5 font-semibold text-blue-400">
               Article #{postSlug.id}
@@ -61,7 +66,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
           <p className="mt-4 text-base leading-relaxed text-gray-400 md:text-lg">
             {postSlug.excerpt}
           </p>
-        </header>
+        </motion.header>
 
         {/* Markdown Body */}
         <div className="prose prose-invert prose-blue max-w-none prose-headings:font-bold prose-headings:tracking-normal prose-headings:text-white prose-headings:leading-relaxed prose-p:leading-normal prose-p:text-gray-400 prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-code:rounded prose-code:bg-gray-900 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-blue-400 prose-pre:bg-gray-900/70">

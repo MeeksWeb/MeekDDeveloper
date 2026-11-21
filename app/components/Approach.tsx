@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
 
@@ -8,8 +9,13 @@ const Approach = () => {
       className="bg-gray-950 px-6 py-24 text-gray-100 md:py-32"
     >
       <div className="mx-auto max-w-8xl">
-        <div className="mb-14 md:mb-20">
-
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-14 md:mb-20"
+        >
           <h2 className="font-display text-4xl leading-normal tracking-tight text-white md:text-6xl">
             FROM IDEA
             <br />
@@ -21,10 +27,16 @@ const Approach = () => {
             and modern frontend development to create meaningful digital
             experiences.
           </p>
-        </div>
+        </motion.div>
 
         {/* STEPS */}
-        <div className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+        >
           <span className="font-display text-xl text-blue-500">01</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
@@ -38,9 +50,15 @@ const Approach = () => {
             insights help me define a clear direction and build solutions that
             solve real problems.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid gap-6 border-t border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+        >
           <span className="font-display text-xl text-blue-500">02</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
@@ -54,9 +72,15 @@ const Approach = () => {
             experiences that balance usability, accessibility, and visual
             excellence.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 border-y border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="grid gap-6 border-y border-gray-800 py-12 md:grid-cols-[80px_1fr_1fr] md:gap-10"
+        >
           <span className="font-display text-xl text-blue-500">03</span>
 
           <h3 className="text-2xl font-semibold leading-[1.3] text-white md:text-3xl">
@@ -70,7 +94,7 @@ const Approach = () => {
             compatibility to deliver polished digital products ready for real
             users.
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-16 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <p className="max-w-sm text-base leading-relaxed text-gray-400">
