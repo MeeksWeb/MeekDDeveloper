@@ -78,7 +78,7 @@ const HeroSection = () => {
             duration: 0.8,
             ease: "easeOut",
           }}
-          className="relative overflow-hidden rounded-2xl border border-charcoal-800 bg-charcoal-900 p-2"
+          className="relative overflow-hidden rounded-2xl bg-charcoal-900 p-2"
         >
           <img
             src="/meekddeveloper.jpeg"

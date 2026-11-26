@@ -62,7 +62,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
         </motion.header>
 
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left Portrait Image */}
+
           <div className="lg:col-span-5">
             <div className="overflow-hidden bg-charcoal-900">
               <img

@@ -9,10 +9,8 @@ export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Projects[] }> {
   // Previous: separate JSON Server, configured through .env.
-  // const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL;
 
-  // Current: API hosted alongside this website.
-  const apiUrl = new URL("/api", request.url).href;
   const res = await fetch(`${apiUrl}/projects`);
   if (!res.ok)
     throw new Response("Failed to fetch data", {
