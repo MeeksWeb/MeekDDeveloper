@@ -1,22 +1,41 @@
 import { motion } from "motion/react";
 import ProjectsCard from "~/components/ProjectsCard";
 import { reveal } from "~/motion";
-import type { Projects } from "~/type";
+import type { Projects, StrapiProjects, StrapiResponse } from "~/type";
 import type { Route } from "./+types/index";
 
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Projects[] }> {
   const apiUrl = import.meta.env.VITE_API_URL;
-  const res = await fetch(`${apiUrl}/projects`);
+  const imageUrl = import.meta.env.VITE_IMAGE_URL;
+  const res = await fetch(`${apiUrl}/projects?sort=date:desc&populate=*`);
+
   if (!res.ok)
     throw new Response("Failed to fetch data", {
       status: res.status,
     });
-  const data = await res.json();
-  return {
-    projects: data,
-  };
+
+  const json: StrapiResponse<StrapiProjects> = await res.json();
+
+  const projects = json.data.map((item) => ({
+    ...item, 
+    // id: item.id,
+    // documentId: item.documentId,
+    // title: item.title,
+    // description: item.description,
+    // url: item.url,
+    // date: item.date,
+    // category: item.category,
+    // featured: item.featured,
+    // role: item.role,
+    // problem: item.problem,
+    // solution: item.solution,
+    // overview: item.overview,
+    image: item.image?.url ? `${imageUrl}${item.image.url}` : "/no-image.png",
+  }));
+
+  return { projects };
 }
 
 const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
