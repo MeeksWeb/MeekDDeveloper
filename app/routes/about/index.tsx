@@ -6,7 +6,7 @@ import Experience from "~/components/about/Experience";
 import Frontend from "~/components/about/Frontend";
 import Tools from "~/components/about/Tools";
 import { reveal } from "~/motion";
-import type { AboutProps } from "~/type";
+import type { AboutProps, StrapiAbout, StrapiResponse } from "~/type";
 import type { Route } from "./+types";
 
 type AddAllTypesProps = {
@@ -19,14 +19,15 @@ type AddAllTypesProps = {
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<AddAllTypesProps> {
-  const apiUrl = import.meta.env.VITE_ABOUT_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const [designRes, engRes, toolRes, experienceRes] = await Promise.all([
-    fetch(`${apiUrl}/designSkills`),
-    fetch(`${apiUrl}/engineeringSkills`),
-    fetch(`${apiUrl}/toolchain`),
-    fetch(`${apiUrl}/experience`),
+    fetch(`${apiUrl}/design-skills`),
+    fetch(`${apiUrl}/engineeringskills`),
+    fetch(`${apiUrl}/toolchains`),
+    fetch(`${apiUrl}/experiences`),
   ]);
+
   if (!designRes.ok || !engRes.ok || !toolRes.ok || !experienceRes.ok)
     throw new Response("data not found", {
       status:
@@ -36,12 +37,27 @@ export async function loader({
         experienceRes.status,
     });
 
-  const [designs, engineers, tools, experience] = await Promise.all([
-    designRes.json(),
-    engRes.json(),
-    toolRes.json(),
-    experienceRes.json(),
-  ]);
+  const designJson: StrapiResponse<StrapiAbout> = await designRes.json();
+  const engineersJson: StrapiResponse<StrapiAbout> = await engRes.json();
+  const toolsJson: StrapiResponse<StrapiAbout> = await toolRes.json();
+  const experienceJson: StrapiResponse<StrapiAbout> =
+    await experienceRes.json();
+
+  //create a function instead of repeating format
+  const formatData = (item: StrapiAbout) => ({
+    id: item.id,
+    documentId: item.documentId,
+    period: item.period,
+    role: item.role,
+    name: item.name,
+    company: item.company,
+    summary: item.summary,
+  });
+
+  const designs = designJson.data.map(formatData);
+  const engineers = engineersJson.data.map(formatData);
+  const tools = toolsJson.data.map(formatData);
+  const experience = experienceJson.data.map(formatData);
 
   return {
     designs,

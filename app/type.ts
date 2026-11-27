@@ -57,4 +57,14 @@ export type StrapiProjects = {
       thumbnail?: { url: string };
     };
   };
+};   
+
+export type StrapiAbout = {
+  id: string;
+  documentId: string;
+  period?: string;
+  role?: string;
+  name?: string;
+  company?: string;
+  summary?: string;
 };
