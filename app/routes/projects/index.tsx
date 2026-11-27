@@ -19,20 +19,22 @@ export async function loader({
   const json: StrapiResponse<StrapiProjects> = await res.json();
 
   const projects = json.data.map((item) => ({
-    ...item, 
-    // id: item.id,
-    // documentId: item.documentId,
-    // title: item.title,
-    // description: item.description,
-    // url: item.url,
-    // date: item.date,
-    // category: item.category,
-    // featured: item.featured,
-    // role: item.role,
-    // problem: item.problem,
-    // solution: item.solution,
-    // overview: item.overview,
-    image: item.image?.url ? `${imageUrl}${item.image.url}` : "/no-image.png",
+    // ...item,
+    id: item.id,
+    documentId: item.documentId,
+    title: item.title,
+    description: item.description,
+    url: item.url,
+    date: item.date,
+    category: item.category,
+    featured: item.featured,
+    role: item.role,
+    problem: item.problem,
+    solution: item.solution,
+    overview: item.overview,
+    image: item.image?.url
+      ? `${imageUrl}${item.image.formats?.medium?.url ?? item.image.url}`
+      : "/no-image.png",
   }));
 
   return { projects };
@@ -41,9 +43,6 @@ export async function loader({
 const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
   const { projects } = loaderData;
 
-  const sortProjects = [...projects].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
   return (
     <main className="min-h-screen bg-charcoal-950 text-charcoal-100 selection:bg-brand-500 selection:text-white">
       <div className="mx-auto max-w-8xl px-6 pt-4 pb-24 md:pt-24">
@@ -63,7 +62,7 @@ const ProjectPage = ({ loaderData }: Route.ComponentProps) => {
           {...reveal}
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {sortProjects.map((project) => (
+          {projects.map((project) => (
             <ProjectsCard key={project.id} project={project} />
           ))}
         </motion.section>

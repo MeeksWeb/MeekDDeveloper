@@ -4,7 +4,7 @@ import { reveal } from "~/motion";
 import type { Projects } from "~/type";
 const FeaturedCard = ({ project }: { project: Projects }) => {
   return (
-    <Link to={`/project/${project.id}`}>
+    <Link to={`/project/${project.documentId}`}>
       <motion.div
         {...reveal}
         className="group rounded-2xl bg-charcoal-900/50 overflow-hidden"
@@ -12,9 +12,7 @@ const FeaturedCard = ({ project }: { project: Projects }) => {
         <div>
           <img
             src={project.image}
-            srcSet={`${project.image.replace(/\.webp$/, "-800.webp")} 800w, ${project.image} 1600w`}
-            sizes="(min-width: 768px) 50vw, 100vw"
-            alt={`${project.title} preview`}
+            alt={project.title} 
             loading="lazy"
             decoding="async"
           />

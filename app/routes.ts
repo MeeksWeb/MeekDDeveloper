@@ -11,7 +11,7 @@ export default [
   layout("./routes/layouts/MainLayout.tsx", [
     route("about", "./routes/about/index.tsx"),
     route("project", "./routes/projects/index.tsx"),
-    route("project/:id", "./routes/projects/details.tsx"),
+    route("project/:documentId", "./routes/projects/details.tsx"),
     route("blog", "./routes/blogs/index.tsx"),
     route("blog/:slug", "./routes/blogs/details.tsx"),
     route("contact", "./routes/contact/index.tsx"),

@@ -6,9 +6,7 @@ import type { Projects } from "~/type";
 import FeaturedCard from "./FeaturedCard";
 
 const FeaturedProjects = ({ projects }: { projects: Projects[] }) => {
-  const featuredProjects = projects
-    .filter((project) => project.featured === true)
-    .slice(0, 2);
+  const featuredProjects = projects.slice(0, 2);
 
   return (
     <motion.section {...reveal} className="px-4 py-16 ">

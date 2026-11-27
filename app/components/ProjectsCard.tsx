@@ -5,7 +5,7 @@ import type { Projects } from "~/type";
 
 const ProjectsCard = ({ project }: { project: Projects }) => {
   return (
-    <Link to={`/project/${project.id}`}>
+    <Link to={`/project/${project.documentId}`}>
       <motion.article
         {...reveal}
         className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-charcoal-900/40 transition-all duration-300 hover:-translate-y-1 border-charcoal-900/40  hover:border-brand-400 "

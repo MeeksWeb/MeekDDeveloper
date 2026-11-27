@@ -2,32 +2,50 @@ import { motion } from "motion/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
 import { reveal } from "~/motion";
-import type { Projects } from "~/type";
+import type { Projects, StrapiProjects, StrapiResponse } from "~/type";
 import type { Route } from "./+types/details";
 
-export async function loader({
-  request,
-  params,
-}: Route.LoaderArgs): Promise<Projects> {
-  const { id } = params;
-  // Previous: separate JSON Server, configured through .env.
-  // const apiUrl = import.meta.env.VITE_API_URL;
+export async function loader({ params }: Route.LoaderArgs) {
+  const { documentId } = params;
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
-  // Current: API hosted alongside this website.
-  const apiUrl = new URL("/api", request.url).href;
-  const res = await fetch(`${apiUrl}/projects/${id}`);
+  const res = await fetch(
+    `${apiUrl}/projects?filters[documentId][$eq]=${documentId}&populate=*`,
+  );
   if (!res.ok) {
     throw new Response("Failed to load project", {
       status: res.status,
     });
   }
 
-  const data: Projects = await res.json();
-  return data;
+  const json: StrapiResponse<StrapiProjects> = await res.json();
+  const data = json.data[0];
+  if (!data) {
+    throw new Response("Project not found", { status: 404 });
+  }
+
+  const project: Projects = {
+    id: data.id,
+    documentId: data.documentId,
+    title: data.title,
+    description: data.description,
+    url: data.url,
+    date: data.date,
+    category: data.category,
+    featured: data.featured,
+    role: data.role,
+    problem: data.problem,
+    solution: data.solution,
+    overview: data.overview,
+    image: data.image?.url ? `${imageUrl}${data.image.url}` : "/no-image.png",
+  };
+
+  return { project };
 }
 
 const details = ({ loaderData }: Route.ComponentProps) => {
-  const project = loaderData;
+  const { project } = loaderData;
 
   return (
     <main className="min-h-screen bg-charcoal-950 text-charcoal-100 selection:bg-brand-500 selection:text-white">
@@ -57,7 +75,7 @@ const details = ({ loaderData }: Route.ComponentProps) => {
           {...reveal}
           className="grid grid-cols-1 items-start gap-10 lg:grid-cols-1"
         >
-          <div className="overflow-hidden rounded-2xl border border-charcoal-800/80 bg-charcoal-900/50 p-3 lg:col-span-1">
+          <div className="overflow-hidden rounded-2xl bg-charcoal-900 p-3 lg:col-span-1">
             <img
               src={project.image}
               alt={`${project.title} interface showcase`}
